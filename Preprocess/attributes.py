@@ -1,13 +1,11 @@
 # this file gives crisp numerical values to all the non-numerical values in the data set 
 
-
-# Numercial values to Protocols 
+# Numercial values to Protocols are
 tcp=1
 udp=2
 icmp=3
 
-
-# Numerical values to Services
+# Numerical values to Services are 
 IRC = 1
 X11 = 2
 Z39_50 = 3
