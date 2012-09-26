@@ -9,4 +9,6 @@ Reduced_kddcup.data : New Data Set
 
 Kddcup.data: Data Set Which is used by info.py , bcoz of its heavy size file is not uploaded . You can upload it and put it in root directory from(http://kdd.ics.uci.edu/databases/kddcup99/kddcup.data.gz)
 
+Attributes.py : has all possible values of attributes given global variable
 
+Attribute_list : Names of the attributes . 

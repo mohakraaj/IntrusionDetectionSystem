@@ -1,7 +1,7 @@
 from attributes import * 
 
 
-N=3000	#Number of training elements in the new reduced data set
+N=6000	#Number of training elements in the new reduced data set
 Data_set=open('../kddcup.data','r')
 Reduced_set=open('Reduced_kddcup.data','w') # The new reduced data set 
 
@@ -77,7 +77,7 @@ def Info_Normalize():
 	i=1
 	Data_set=open('../kddcup.data','r')
 	for line in Data_set:
-		if i<6000:
+		if i<N:
 			info=line.split(",")
 			classi=info[41][:-1] # -1 bcoz there is a '.' after the class name 
 			try:
@@ -104,7 +104,7 @@ def Info_Normalize():
 		else:
 			return 	
 
-#Info_quantify()
+Info_quantify()
 Info_Normalize()
 print "count_normal",count_normal
 print "count_dos",count_dos
