@@ -1,4 +1,5 @@
-# this file gives crisp numerical values to all the non-numerical values in the data set 
+# this file has details about all the Attributes 
+
 
 # Numercial values to Protocols are
 tcp=1

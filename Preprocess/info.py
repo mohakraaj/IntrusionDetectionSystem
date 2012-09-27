@@ -5,7 +5,7 @@ N=6000	#Number of training elements in the new reduced data set
 Data_set=open('../kddcup.data','r')
 Reduced_set=open('Reduced_kddcup.data','w') # The new reduced data set 
 
-# counts 
+# counts of each class 
 count_normal=0
 count_dos=0
 count_r2l=0
