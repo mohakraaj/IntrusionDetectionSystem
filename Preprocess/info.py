@@ -21,12 +21,6 @@ for i in range(42):
 for i in range(42):
 	Min.append(100000)
 
-# Attacks categorized to 4 type 
-dos=["back","land","neptune","pod","smurf","teardrop"] #type 1 attack
-r2l=["ftp_write","guess_passwd","imap","multihop","phf","spy","warezclient","warezmaster"] # type 2  
-u2r=["buffer_overflow","loadmodule","perl","rootkit"] #type 3 
-probe=["nmap","satan","ipsweep","portsweep"] # type 4
-
 
 def Info_quantify():
 	i=1
@@ -34,15 +28,15 @@ def Info_quantify():
 			info=line.split(",")
 			classi=info[41][:-2] # -2 bcoz there is a '.\n' after the class name 
 			try:
-				info[1]=eval(info[1])
+				info[1]=Protocol.index(info[1])+1
 			except:
 				info[1]=0
 			try:
-				info[2]=eval(info[2])
+				info[2]=Service.index(info[2])+1
 			except:
 				info[2]=0	
 			try:
-				info[3]=eval(info[3])
+				info[3]=Flag.index(info[3])+1
 			except:
 				info[3]=0	
 			for j in range(41):
@@ -71,8 +65,8 @@ def Info_quantify():
 """ After Calling Info_quantify Max and Minimum Values are found """
 
 #comment the below lines if you are calling Info_quantify
-#Max=[58329.0, 3.0, 70.0, 11.0, 1379963888.0, 1309937401.0, 1.0, 3.0, 14.0, 77.0, 5.0, 1.0, 7479.0, 1.0, 2.0, 7468.0, 43.0, 2.0, 9.0, 0.0, 1.0, 1.0, 511.0, 511.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 255.0, 255.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1]
-#Min=[0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 100000]
+Max=[58329.0, 3.0, 70.0, 11.0, 1379963888.0, 1309937401.0, 1.0, 3.0, 14.0, 77.0, 5.0, 1.0, 7479.0, 1.0, 2.0, 7468.0, 43.0, 2.0, 9.0, 0.0, 1.0, 1.0, 511.0, 511.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 255.0, 255.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1]
+Min=[0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 100000]
 def Info_Normalize():
 	i=1
 	Data_set=open('../kddcup.data','r')
@@ -81,15 +75,15 @@ def Info_Normalize():
 			info=line.split(",")
 			classi=info[41][:-1] # -1 bcoz there is a '.' after the class name 
 			try:
-				info[1]=eval(info[1])
+				info[1]=Protocol.index(info[1])+1
 			except:
 				info[1]=0
 			try:
-				info[2]=eval(info[2])
+				info[2]=Service.index(info[2])+1
 			except:
 				info[2]=0	
 			try:
-				info[3]=eval(info[3])
+				info[3]=Flag.index(info[3])+1
 			except:
 				info[3]=0	
 			for j in range(41):
@@ -104,7 +98,7 @@ def Info_Normalize():
 		else:
 			return 	
 
-Info_quantify()
+#Info_quantify()
 Info_Normalize()
 print "count_normal",count_normal
 print "count_dos",count_dos
