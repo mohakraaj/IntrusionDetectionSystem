@@ -1,7 +1,10 @@
 /*
-AUTHORS: MOHAK R
-	SPURTHI
-	RAHUL V SHARAN
+AUTHORS: 
+MOHAK R (Kdgrocks :P)
+
+SPURTHI
+
+RAHUL 
 This is a major project for our college purpose . This code is free of any proprietary restriction anyone can make any modification and use it .. lol :P 
  
 */
