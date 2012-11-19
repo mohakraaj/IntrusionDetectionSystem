@@ -44,7 +44,13 @@ def main():
 			for k in range(3):
 				membership_matrix[i][j].append(random.random())
 	#membership_matrix=[[[random.random() for i in range(3)] for j in range(number_records)] for k in range(number_attributes)]
-	print number_records,"---", len(membership_matrix[0]),"--"
+	#print number_records,"---", len(membership_matrix[0]),"--"
+	center_file.write("-------------------------------------------------\n")
+	center_file.write("CLUSTER CENTERS FOR EACH ATTRIBUTE\n")
+	center_file.write("-------------------------------------------------\n")
+	membership_matrix_file.write("-------------------------------------------------\n")
+	membership_matrix_file.write("MEMBERSHIP VALUES OF DATA POINTS WITH CLUSTERS \n")
+	membership_matrix_file.write("-------------------------------------------------\n")
 	for i in range(number_attributes):
 		x=array(data[i])
 		mu=array(membership_matrix[i])
@@ -55,7 +61,7 @@ def main():
 		center_file.write('\n')
 		membership_matrix_file.write(str(membership_matrix[i]))	
 		membership_matrix_file.write('\n')
-	print membership_matrix[0][12345][2]	
+	#print membership_matrix[0][12345][2]	
 	records.close()
 
 
